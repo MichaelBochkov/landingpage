@@ -1,0 +1,358 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+}
+
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.menu-burger {
+    display: none;
+}
+
+.menu__body {
+    margin: 0 10px 0 10px;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.menu__list>li>a {
+    text-decoration: none;
+    color: #828282;
+}
+
+.menu__list>li>a:hover {
+    color: #000;
+    font-weight: 700;
+}
+
+hr {
+    border: none;
+    background-color: #828282;
+    margin: 30px 10px 0 10px;
+    height: 1px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+}
+
+.name {
+    padding: 20px 0;
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.info-stack {
+    padding: 0;
+    margin: 0;
+    align-self: center;
+}
+
+.language {
+    align-self: center;
+    transform: rotate(-90deg);
+    padding-top: 40px;
+}
+
+.background {
+    margin: 0 10px 0 10px;
+}
+
+.background__img {
+    width: 100%;
+}
+
+.mobile__background__img {
+    display: none;
+}
+
+.about-me {
+    display: flex;
+    margin-top: 90px;
+    text-align: center;
+    background-color: #F6F6F6;
+}
+
+.title-about-me {
+    padding: 5px 0;
+    font-size: 34px;
+}
+
+.about-me .wrapper>p:last-child {
+    padding: 0 0 10px 0;
+}
+
+.skills {
+    margin-top: 90px;
+}
+
+.title-skills {
+    font-size: 34px;
+    text-align: center;
+}
+
+.work-programm {
+    text-align: center;
+    padding: 20px 0 15px 0;
+}
+
+.wrapper-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px 10px 0 10px;
+}
+
+.wrapper-skills-content {
+    width: 166px;
+    text-align: center;
+}
+
+.wrapper-skills-content>p {
+    padding-top: 25px;
+    font-size: 14px;
+}
+
+.stars-skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 41px;
+}
+
+.wrapper-skills-content:last-child .stars-skills {
+    margin-top: 57px;
+}
+
+.portfolio {
+    background-color: #F6F6F6;
+    margin-top: 90px;
+    padding-bottom: 100px;
+}
+
+.title-portfolio {
+    padding-top: 80px;
+    font-size: 34px;
+    text-align: center;
+}
+
+.wrapper-portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: 70px 10px 0 10px;
+}
+
+.wrapper-portfolio-content>p {
+    padding-top: 22px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.wrapper-portfolio-content>img {
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    margin: 0 10px 0 10px;
+}
+
+.title-footer {
+    padding-top: 70px;
+}
+
+.info-contacts {
+    padding: 10px 3px 0 0;
+}
+
+.fotter-btn {
+    width: 180px;
+    height: 40px;
+    margin-top: 25px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 1px solid #000;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.wrapper-footer {
+    max-width: 342px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 60px auto;
+}
+
+.wrapper-footer-content {
+    margin: 0 10px 0 10px;
+}
+
+.txt-footer {
+    padding: 35px 0 80px 0;
+    font-size: 14px;
+    color: #828282;
+}
+
+@media (max-width: 767px) {
+    .menu-burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        margin-top: 90px;
+        margin-right: 10px;
+        float: right;
+        cursor: pointer;
+        z-index: 10;
+    }
+    .menu-burger span,
+    .menu-burger::before,
+    .menu-burger::after {
+        position: absolute;
+        width: 100%;
+        height: 10%;
+        transition: all 0.3s ease 0s;
+        background-color: #000;
+    }
+    .menu-burger::before,
+    .menu-burger::after {
+        content: "";
+    }
+    .menu-burger::before {
+        top: 0;
+    }
+    .menu-burger::after {
+        bottom: 0;
+    }
+    .menu-burger span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    .menu-burger.active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+    .menu-burger.active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+        background-color: #828282;
+    }
+    .menu-burger.active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+        background-color: #828282;
+    }
+    .menu__body {
+        display: none;
+    }
+    .menu__body.active {
+        display: block;
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        transition-duration: 0.2s;
+        transition-delay: 0.15s;
+        z-index: 1;
+    }
+    .menu__list {
+        flex-direction: column;
+        padding: 65px 0 120px 10px;
+        gap: 55px;
+        background-color: #fff;
+    }
+    hr {
+        display: none;
+    }
+    .about {
+        margin-top: 80px;
+        flex-direction: column;
+        float: left;
+    }
+    .info-stack {
+        padding-top: 20px;
+        padding-bottom: 50px;
+        font-size: 22px;
+        align-self: flex-start;
+    }
+    .name {
+        padding: 0;
+    }
+    .language {
+        display: none;
+    }
+    .background__img {
+        display: none;
+    }
+    .mobile__background__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .title-about-me {
+        padding: 25px 0 15px 0;
+    }
+    .about-me .wrapper>p:last-child {
+        padding-bottom: 25px;
+    }
+    .skills {
+        margin: 75px 0 0 0;
+    }
+    .work-programm {
+        padding-top: 15px;
+        font-size: 22px;
+    }
+    .wrapper-skills {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .wrapper-skills-content {
+        margin-top: 60px;
+    }
+    .wrapper-skills-content>p {
+        padding-top: 15px;
+        font-size: 20px;
+    }
+    .stars-skills {
+        margin-top: 40px;
+    }
+    .portfolio {
+        margin-top: 80px;
+    }
+    .title-portfolio {
+        padding-top: 70px;
+    }
+    .wrapper-portfolio-content>p {
+        font-size: 22px;
+        text-decoration: underline;
+    }
+    .info-contacts {
+        font-size: 20px;
+    }
+    .fotter-btn {
+        width: 316px;
+        height: 42px;
+        font-size: 22px;
+    }
+    .txt-footer {
+        padding-top: 0;
+        font-size: 20px;
+    }
+}
